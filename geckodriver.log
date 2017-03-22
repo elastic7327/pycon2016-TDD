@@ -1,0 +1,22 @@
+1490165001068	geckodriver	INFO	Listening on 127.0.0.1:56685
+1490165003988	mozprofile::profile	INFO	Using profile path /var/folders/bj/z6pb_mg95vvgcl0yd_r15nvr0000gn/T/rust_mozprofile.r2U0G2V3otmG
+1490165003989	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args []
+1490165004041	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56694
+1490165006362	Marionette	INFO	Listening on port 56694
+1490165008466	Marionette	INFO	startBrowser 8cbcba35-047d-cd4e-9663-84a81c44cec9
+1490165040844	geckodriver	INFO	Listening on 127.0.0.1:56753
+1490165042028	mozprofile::profile	INFO	Using profile path /var/folders/bj/z6pb_mg95vvgcl0yd_r15nvr0000gn/T/rust_mozprofile.XcS4yBc8EVJL
+1490165042030	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args []
+1490165042032	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56759
+1490165042445	Marionette	INFO	Listening on port 56759
+1490165043386	Marionette	INFO	startBrowser e7c16be2-aa8f-084d-8879-253b67e76dee
+1490165073652	geckodriver	INFO	Listening on 127.0.0.1:56787
+1490165074654	mozprofile::profile	INFO	Using profile path /var/folders/bj/z6pb_mg95vvgcl0yd_r15nvr0000gn/T/rust_mozprofile.cklNgIz5Meb2
+1490165074655	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args []
+1490165074658	geckodriver::marionette	INFO	Connecting to Marionette on localhost:56794
+1490165075072	Marionette	INFO	Listening on port 56794
+1490165076002	Marionette	INFO	startBrowser 2fa56819-72f5-cb42-8687-536ff29cc6ad
+1490165628625	geckodriver	INFO	Listening on 127.0.0.1:57044
+1490165629862	mozprofile::profile	INFO	Using profile path /var/folders/bj/z6pb_mg95vvgcl0yd_r15nvr0000gn/T/rust_mozprofile.nT0aXDAguBms
+1490165629864	geckodriver::marionette	INFO	Starting browser /Applications/Firefox.app/Contents/MacOS/firefox-bin with args []
+1490165629894	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57050
