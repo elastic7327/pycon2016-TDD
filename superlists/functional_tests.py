@@ -49,8 +49,7 @@ class NewVersinTest(unittest.TestCase):
         # "1 : Buy peacock feathers" as an item in a to-di list table
 
         self.check_for_row_in_list_table('1: Buy peacock feathers')
-        self.check_for_row_in_list_table('2: Use peacock feathers \
-                    to make a fly')
+        self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
 
         # There is still a text box inviting her to add another item. she
         # enters "Use peacock feathers to make a fly" (Edith is very
