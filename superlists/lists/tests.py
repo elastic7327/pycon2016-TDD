@@ -5,10 +5,12 @@ from django.template.loader import render_to_string
 
 from lists.models import Item, List
 
-#from lists.views import home_page
+import ipdb as br
+
+# from lists.views import home_page
 
 
-#class HomePageTest(TestCase):
+# class HomePageTest(TestCase):
 #
 #    def test_root_url_resolve_to_home_page_view(self):
 #        found = resolve('/')
@@ -152,8 +154,16 @@ class NewItemTest(TestCase):
         correct_list = List.objects.create()
 
         response = self.client.post(
-                '/lists/%d/add_item' % (correct_list.id),
+                '/lists/%d/add_item/' % (correct_list.id),
                 data={'item_text': 'A new item for an existing list'}
         )
 
+        br.set_trace()
+
         self.assertRedirects(response, '/lists/%d/' % (correct_list.id,))
+
+    def test_passes_correct_list_to_template(self):
+        other_list = List.objects.create()
+        correct_list = List.objects.create()
+        response = self.client.get('/lists/%d/' % (correct_list.id))
+        self.assertEquals(response.context['list'], correct_list)
