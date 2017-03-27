@@ -12,7 +12,7 @@ http://www.obeythetestinggoat.com/
 
 
 <p align="left">
-  <img src="./img/testing_goat.png" width="700"/>
+  <img src="./img/testing_goat.jpg" width="700"/>
   </p>
 
 
