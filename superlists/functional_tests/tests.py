@@ -3,6 +3,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import unittest
 
+import ipdb as br
+
 
 class NewVersinTest(LiveServerTestCase):
 
@@ -53,8 +55,8 @@ class NewVersinTest(LiveServerTestCase):
         edith_list_url = self.browser.current_url
         self.assertRegexpMatches(edith_list_url, '/lists/.+')
 
-        self.check_for_row_in_list_table('1: Buy peacock feathers')
         self.check_for_row_in_list_table('2: Use peacock feathers to make a fly')
+        self.check_for_row_in_list_table('1: Buy peacock feathers')
 
         # There is still a text box inviting her to add another item. she
         # enters "Use peacock feathers to make a fly" (Edith is very
@@ -64,8 +66,10 @@ class NewVersinTest(LiveServerTestCase):
         # We use a new browser session to make sure that no information
         # of Edith's is comming through from cookies etc#
 
+        br.set_trace()
+
         self.browser.quit()
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.Chrome()
 
         # Franchis visites the home page. There is no sign of Edith's
         # list
@@ -85,7 +89,7 @@ class NewVersinTest(LiveServerTestCase):
         # Francis gets his own unique URL
         francis_list_url = self.browser.current_url
         self.assertRegexpMatches(francis_list_url, '/lists/.+')
-        self.assertEqual(francis_list_url, edith_list_url)
+        self.assertNotEqual(francis_list_url, edith_list_url)
 
         # Again, there is no trace of Edith's list
         page_text = self.browser.find_element_by_tag_name('body').text
