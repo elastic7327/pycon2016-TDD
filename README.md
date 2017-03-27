@@ -16,4 +16,14 @@ http://www.obeythetestinggoat.com/
   </p>
 
 
+### ipdb
+
+
+```sh
+$ ipdb ll     ==  list
+$ ipdb s     ==  step 
+$ ipdb q     ==  quit 
+$ ipdb  etc etc etc ...     ==  etc... 
+```
+
 
