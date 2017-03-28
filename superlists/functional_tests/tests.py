@@ -1,3 +1,5 @@
+import sys
+
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -7,6 +9,20 @@ import ipdb as br
 
 
 class NewVisitorTest(StaticLiveServerTestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        for arg in sys.argv:
+            if 'liveserver' in arg:
+                cls.server_url = 'http://' + arg.split('=')[1]
+                return 
+        super().setUpClass()
+        cls.server_url = cls.live_server_url
+
+    @classmethod
+    def tearDownClass(cls):
+        # if cls.server_url == cls.live_server_url:
+            super().tearDownClass()
 
     def setUp(self):
         self.browser = webdriver.Chrome()
@@ -24,7 +40,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
         # Edith has heard about a cool new online to-do app. She goes
         # to check out its homepage
         # self.browser.get("http://localhost:8000")
-        self.browser.get(self.live_server_url)
+        self.browser.get(self.server_url)
 
         # She notices the apge title and hearder mention to-do lists
         self.assertIn("To-Do", self.browser.title)
@@ -96,7 +112,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
 
     def test_layout_and_styling(self):
         # Edith goes to the home page
-        self.browser.get(self.live_server_url)
+        self.browser.get(self.server_url)
         self.browser.set_window_size(1024, 768)
 
         # She notices the input box is nicely centered
@@ -117,9 +133,6 @@ class NewVisitorTest(StaticLiveServerTestCase):
                 512,
                 delta=5
         )
-
-
-
 
         def test_is_over(self):
             self.fail("Finish the test!! hoooray!!")
