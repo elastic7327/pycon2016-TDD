@@ -21,8 +21,7 @@ def host_type():
 
 def uptime():
     run('uptime')
-    # local('uptime')
-
+    run('ls -alg')
 
 def hello(who="world"):
     run('ls -alg')
