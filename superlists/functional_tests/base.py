@@ -4,18 +4,19 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import unittest
+from unittest import skip
 
 import ipdb as br
 
 
-class NewVisitorTest(StaticLiveServerTestCase):
+class FunctionalTest(StaticLiveServerTestCase):
 
     @classmethod
     def setUpClass(cls):
         for arg in sys.argv:
             if 'liveserver' in arg:
                 cls.server_url = 'http://' + arg.split('=')[1]
-                return 
+                return
         super().setUpClass()
         cls.server_url = cls.live_server_url
 
@@ -35,6 +36,9 @@ class NewVisitorTest(StaticLiveServerTestCase):
         table = self.browser.find_element_by_id("id_lists_table")
         rows = table.find_elements_by_tag_name('tr')
         self.assertIn(row_text, [row.text for row in rows])
+
+
+class NewVisitorTest(FunctionalTest):
 
     def test_can_start_a_list_and_retrive_it_later(self):
         # Edith has heard about a cool new online to-do app. She goes
@@ -109,6 +113,10 @@ class NewVisitorTest(StaticLiveServerTestCase):
 #        page_text = self.browser.find_element_by_tag_name('body').text
 #        self.assertNotIn('Buy peacock feathers', page_text)
 #        self.assertIn('Buy milk', page_text)
+    pass
+
+
+class LayoutAndStylingTest(FunctionalTest):
 
     def test_layout_and_styling(self):
         # Edith goes to the home page
@@ -134,9 +142,16 @@ class NewVisitorTest(StaticLiveServerTestCase):
                 delta=5
         )
 
-        def test_is_over(self):
-            self.fail("Finish the test!! hoooray!!")
 
+class ItemValidationTest(FunctionalTest):
+
+    @skip
+    def test_cannot_add_empty_list_items(self):
+        pass
+
+    @skip
+    def test_is_over(self):
+        self.fail("Finish the test!! hoooray!!")
 
 if __name__ == "__main__":
     unittest.main(warnings="ignore")
