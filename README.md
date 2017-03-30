@@ -9,6 +9,9 @@ http://www.obeythetestinggoat.com/
   <img src="./img/testing_goat.jpg" width="500"/>
   </p>
 
+<p align="left">
+  <img src="./img/demo.png" width="350"/>
+  </p>
 
 ### ipdb
 
