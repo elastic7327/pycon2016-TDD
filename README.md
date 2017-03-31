@@ -1,4 +1,4 @@
-# Pycon2016-tdd functional_view version
+# Pycon2016-tdd with functional_view
 
 
 Obey the Testing Goat!
