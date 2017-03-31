@@ -1,5 +1,4 @@
-# Pycon2016-tdd
-
+# Pycon2016-tdd functional_view version
 
 
 Obey the Testing Goat!
@@ -22,5 +21,4 @@ $ ipdb s     ==  step
 $ ipdb q     ==  quit 
 $ ipdb  etc etc etc ...     ==  etc... 
 ```
-
 
