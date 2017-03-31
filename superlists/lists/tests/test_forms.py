@@ -2,6 +2,8 @@ from django.test import TestCase
 
 from lists.forms import EMPTY_LIST_ERROR, ItemForm
 
+import ipdb as br
+
 
 class ItemFormTest(TestCase):
 
