@@ -5,24 +5,24 @@ from django.utils.html import escape
 from django.template.loader import render_to_string
 
 from lists.models import Item, List
+from lists.forms import ItemForm
+
+from lists.views import home_page
 
 import ipdb as br
 
-# from lists.views import home_page
 
+class HomePageTest(TestCase):
+    maxDiff = None
 
-# class HomePageTest(TestCase):
-#
-#    def test_root_url_resolve_to_home_page_view(self):
-#        found = resolve('/')
-#        self.assertEqual(found.func, home_page)
-#
-#    def test_home_page_returns_correct_html(self):
-#        request = HttpRequest()
-#        response = home_page(request)
-#        # expected_html = render_to_string('lists/home.html')
-#        # self.assertEqual(response.content.decode(), expected_html)
-#
+    def test_home_pate_renders_home_template(self):
+        response = self.client.get('/')
+        self.assertTemplateUsed(response, 'lists/home.html')
+
+    def test_home_page_uses_item_form(self):
+        response = self.client.get('/')
+        self.assertIsInstance(response.context['form'], ItemForm)
+
 #    def test_home_page_can_save_a_POST_request(self):
 #        request = HttpRequest()
 #        request.method = 'POST'
@@ -42,11 +42,6 @@ import ipdb as br
 #
 #        self.assertEqual(response.status_code, 302)
 #        self.assertEqual(response['location'], '/lists/the-only-list-in-the-world/')
-#
-#    def test_home_page_only_saves_items_when_necessary(self):
-#        request = HttpRequest()
-#        home_page(request)
-#        self.assertEqual(Item.objects.count(), 0)
 
 
 class ListViewTest(TestCase):
