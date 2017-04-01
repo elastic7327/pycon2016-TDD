@@ -7,6 +7,7 @@ colorama==0.3.7
 cryptography==1.8.1
 decorator==4.0.11
 Django==1.9.9
+docopt==0.6.2
 Fabric3==1.13.1.post1
 flake8==3.3.0
 idna==2.5
@@ -26,6 +27,7 @@ paramiko==2.1.2
 pexpect==4.2.1
 pickleshare==0.7.4
 prompt-toolkit==1.0.14
+ptpython==0.39
 ptyprocess==0.5.1
 py2exe==0.9.2.2
 pyasn1==0.2.3
