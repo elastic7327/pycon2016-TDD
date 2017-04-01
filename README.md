@@ -15,11 +15,12 @@ Obey the Testing Goat!
 http://www.obeythetestinggoat.com/
 
 <p align="left">
-  <img src="./img/testing_goat.jpg" width="500"/>
+  <img src="./img/testing_goat.jpg" width="400"/>
   </p>
 
 <p align="left">
-  <img src="./img/demo.png" width="350"/>
+  <img src="./img/demo.png" width="550"/>
+  <img src="./img/Qunit-demo.png" width="550"/>
   </p>
 
 
