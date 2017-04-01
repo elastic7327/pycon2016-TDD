@@ -3,10 +3,10 @@
 
 
 <p align="left">
-  <img src="./img/tdd.png" width="400"/>
-  <img src="./img/qunit.png" width="400"/>
-  <img src="./img/js.png" width="400"/>
-  <img src="./img/python.png" width="400"/>
+  <img src="./img/tdd.png" width="300"/>
+  <img src="./img/qunit.png" width="300"/>
+  <img src="./img/js.png" width="300"/>
+  <img src="./img/python.png" width="250"/>
 </p>
 
 
