@@ -1,3 +1,5 @@
-$('input').on('keypress', function(){
-	$('.has-error').hide();
+JQuery(document).ready(function ($) {
+	$('input').on('keypress', function(){
+		$('.has-error').hide();
+	});
 });
